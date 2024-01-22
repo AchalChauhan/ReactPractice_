@@ -24,7 +24,6 @@ function App() {
       console.error(error);
     }
   }
-  console.log(userData);
   // let img = 'https://pdtxar.com/wp-content/uploads/2019/04/person-placeholder.jpg';
   return (
     <>
