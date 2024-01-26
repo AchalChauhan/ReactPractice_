@@ -1,0 +1,22 @@
+.nav{
+  background-color: rgb(34,34,34);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  box-shadow: 4px 3px rgb(79 72 72 / 25%);
+}
+.NavBar-list{
+  list-style: none;
+  display: flex;
+}
+
+.NavBar-list > li{
+  padding: 10px;
+}
+
+.header-logo{
+  width: 60px;
+  height: 60px;
+}
