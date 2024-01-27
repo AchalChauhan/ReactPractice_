@@ -45,33 +45,33 @@ export default function TextForm(props) {
             id="text-box"
             rows="8"
             style={{
-              backgroundColor: props.mode === "light" ? "white" : "grey",
+              backgroundColor: props.mode === "light" ? "white" : "#43434b",
               color: props.mode === "light" ? "black" : "white",
             }}
           ></textarea>
         </div>
-        <div className="btn btn-primary mx-2 my-2" onClick={handelUpperCase}>
+        <button className="btn btn-primary mx-2 my-2" disabled={text.length===0} onClick={handelUpperCase}>
           Convert to UpperCase
-        </div>
-        <div className="btn btn-primary mx-2 my-2" onClick={handelLowerCase}>
+        </button>
+        <button className="btn btn-primary mx-2 my-2" disabled={text.length===0} onClick={handelLowerCase}>
           Convert to LowerCase
-        </div>
-        <div className="btn btn-primary mx-2 my-2" onClick={handelClearText}>
+        </button>
+        <button className="btn btn-primary mx-2 my-2" disabled={text.length===0} onClick={handelClearText}>
           Clear Text
-        </div>
-        <div className="btn btn-primary mx-2 my-2" onClick={handelCopy}>
+        </button>
+        <button className="btn btn-primary mx-2 my-2" disabled={text.length===0} onClick={handelCopy}>
           Copy to Clipboard
-        </div>
+        </button>
       </div>
       <div className="container my-4">
         <h3>Text summary</h3>
         <p>
           <strong>
-            {text.split(" ").length - 1} words,{text.length} Charaters{" "}
+            {text.split(" ").filter((element)=>{return element.length != 0}).length} words,{text.length} Charaters{" "}
           </strong>
         </p>
         <p>
-          <strong>{text.split(" ").length * 0.008} Minutes to read it.</strong>
+          <strong>{text.split(" ").filter((element)=>{return element.length != 0}).length * 0.008} Minutes to read it.</strong>
         </p>
         <h3>Preview</h3>
         <p>{text.length >0 ? text: "Enter text to preview"}</p>
