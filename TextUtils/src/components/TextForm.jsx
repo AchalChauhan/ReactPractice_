@@ -20,8 +20,10 @@ export default function TextForm(props) {
   const handelCopy = async () => {
     try {
       await navigator.clipboard.writeText(text);
+      props.showAlert("Text Copied", "success")
       console.log("text coppied");
     } catch (error) {
+      props.showAlert("Failed to Copy text", "danger")
       console.log("failed to copy");
     }
   };
@@ -42,6 +44,10 @@ export default function TextForm(props) {
             onChange={handelonChnage}
             id="text-box"
             rows="8"
+            style={{
+              backgroundColor: props.mode === "light" ? "white" : "grey",
+              color: props.mode === "light" ? "black" : "white",
+            }}
           ></textarea>
         </div>
         <div className="btn btn-primary mx-2 my-2" onClick={handelUpperCase}>
@@ -68,7 +74,7 @@ export default function TextForm(props) {
           <strong>{text.split(" ").length * 0.008} Minutes to read it.</strong>
         </p>
         <h3>Preview</h3>
-        <p>{text}</p>
+        <p>{text.length >0 ? text: "Enter text to preview"}</p>
       </div>
     </>
   );
