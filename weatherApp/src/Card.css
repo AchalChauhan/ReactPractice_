@@ -1,0 +1,35 @@
+.card{
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+.card-body{
+	border: 1px solid #a78686;
+    border-radius: 5%;
+	background-color: #fff;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	
+	width: 300px;
+	height: 250px;
+}
+.card-content{
+    position: relative;
+	width: 92%;
+    left: 4%;
+    top: 3%;
+}
+.temp{
+	display: flex;
+	justify-content: space-between;
+	font-family: 'Roboto, sans-serif' ;
+	height: 1.5rem;
+}
+
+.city-heading{
+	display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: xx-large;
+    font-family: cursive;
+	/* padding-bottom: 10px; */
+}

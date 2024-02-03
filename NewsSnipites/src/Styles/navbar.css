@@ -1,0 +1,21 @@
+.navbar-custom{
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+    position: fixed;
+    border: 3px solid black;
+    background-color: #b53c51;
+    width: 100%;
+}
+
+.navbar-Logo{
+    width: 25rem;
+    height: 5.5rem;
+}
+@media only screen and (max-width: 600px) {
+    .navbar-Logo{
+        width: 90vw;
+        height: 13vh;
+    }
+
+}

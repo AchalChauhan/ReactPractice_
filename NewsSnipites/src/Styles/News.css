@@ -1,0 +1,19 @@
+.news-container{
+    position: absolute;
+    top :6rem;
+    width: 100vw;
+}
+
+.topNews-container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    width: 100vw;
+    background-color: rgb(2,34,105);
+    border: 5px solid yellow;
+}
+
+.topNews-container img{
+    width: 24rem;
+    height: 4.5rem;
+}
